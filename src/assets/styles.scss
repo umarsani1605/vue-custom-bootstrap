@@ -1,0 +1,202 @@
+// Override Bootstrap's Sass default variables
+//
+// Nearly all variables in Bootstrap are written with the `!default` flag.
+// This allows you to override the default values of those variables before
+// you import Bootstrap's source Sass files.
+//
+// Overriding the default variable values is the best way to customize your
+// CSS without writing _new_ styles. For example, you can either change
+// `$body-color` or write more CSS that override's Bootstrap's CSS like so:
+// `body { color: red; }`.
+
+//
+// Bring in Bootstrap
+//
+
+// Option 1
+//
+// Import all of Bootstrap's CSS
+
+// @import "bootstrap/scss/bootstrap";
+
+// Option 2
+//
+// Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
+
+// // Toggle global options
+// $enable-gradients: true;
+// $enable-shadows: true;
+
+// Include functions first
+@import 'bootstrap/scss/functions';
+
+// Custom utilities
+$border-radius: 0.5rem;
+$border-radius-sm: 0.5rem;
+$border-radius-lg: 0.75rem;
+$box-shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+$box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+$box-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+// Custom color
+$primary: #2ca7ff;
+$subtle: #e4f4ff;
+$success: #22c55e;
+$info: #0ea5e9;
+$warning: #eab308;
+$danger: #ef4444;
+
+// Disable focus ring
+$focus-ring-width: 0;
+$focus-ring-opacity: none;
+$focus-ring-color: none;
+$focus-ring-blur: none;
+$focus-ring-box-shadow: none;
+
+// Custom component properties
+$accordion-button-focus-box-shadow: none;
+$accordion-button-active-bg: var(--bs-body-bg);
+$accordion-button-active-color: var(--bs-body-color);
+$badge-font-weight: var(--bs-font-weight-bold);
+$breadcrumb-divider: quote('›');
+$card-border-width: 0;
+$card-border-color: none;
+$card-cap-bg: var(--bs-body-bg);
+$card-box-shadow: var(--bs-box-shadow-sm);
+$input-focus-border-color: var(--bs-primary);
+
+// // Required
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/variables-dark';
+@import 'bootstrap/scss/maps';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/utilities';
+@import 'bootstrap/scss/root';
+@import 'bootstrap/scss/reboot';
+
+@import 'bootstrap/scss/type';
+@import 'bootstrap/scss/images';
+@import 'bootstrap/scss/containers';
+@import 'bootstrap/scss/grid';
+@import 'bootstrap/scss/tables';
+@import 'bootstrap/scss/forms';
+@import 'bootstrap/scss/buttons';
+@import 'bootstrap/scss/transitions';
+@import 'bootstrap/scss/dropdown';
+@import 'bootstrap/scss/button-group';
+@import 'bootstrap/scss/nav';
+@import 'bootstrap/scss/navbar'; // Requires nav
+@import 'bootstrap/scss/card';
+@import 'bootstrap/scss/breadcrumb';
+@import 'bootstrap/scss/accordion';
+@import 'bootstrap/scss/pagination';
+@import 'bootstrap/scss/badge';
+@import 'bootstrap/scss/alert';
+@import 'bootstrap/scss/progress';
+@import 'bootstrap/scss/list-group';
+@import 'bootstrap/scss/close';
+@import 'bootstrap/scss/toasts';
+@import 'bootstrap/scss/modal'; // Requires transitions
+@import 'bootstrap/scss/tooltip';
+@import 'bootstrap/scss/popover';
+@import 'bootstrap/scss/carousel';
+@import 'bootstrap/scss/spinners';
+@import 'bootstrap/scss/offcanvas'; // Requires transitions
+@import 'bootstrap/scss/placeholders';
+
+// Helpers
+@import 'bootstrap/scss/helpers';
+
+// Utilities
+@import 'bootstrap/scss/utilities/api';
+
+// Custom utilities
+.shadow-sm {
+  box-shadow: $box-shadow-sm;
+}
+.shadow {
+  box-shadow: $box-shadow;
+}
+.shadow-md {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+.shadow-lg {
+  box-shadow: $box-shadow-lg;
+}
+.shadow-xl {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+.shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+}
+.shadow-inner {
+  box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+}
+.shadow-none {
+  box-shadow: 0 0 #0000;
+}
+
+// Custom styles
+.alert-primary {
+  --bs-alert-color: #2563eb;
+  --bs-alert-link-color: #2563eb;
+}
+.alert-success {
+  --bs-alert-color: #16a34a;
+  --bs-alert-link-color: #16a34a;
+}
+.alert-warning {
+  --bs-alert-color: #ca8a04;
+  --bs-alert-link-color: #ca8a04;
+}
+.alert-danger {
+  --bs-alert-color: #dc2626;
+  --bs-alert-link-color: #dc2626;
+}
+.alert-info {
+  --bs-alert-color: #2563eb;
+  --bs-alert-link-color: #2563eb;
+}
+
+.badge {
+  vertical-align: bottom;
+}
+
+.btn-primary,
+.btn-success,
+.btn-info,
+.btn-danger,
+.btn-warning {
+  --bs-btn-color: #fff;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-color: #fff;
+  --bs-btn-disabled-color: #fff;
+}
+
+.btn-outline-primary,
+.btn-outline-success,
+.btn-outline-info,
+.btn-outline-danger,
+.btn-outline-warning {
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-color: #fff;
+}
+
+.btn-subtle {
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-primary);
+  --bs-btn-bg: var(--bs-primary-bg-subtle);
+  --bs-btn-border-color: var(--bs-primary-bg-subtle);
+  --bs-btn-hover-color: var(--bs-primary);
+  --bs-btn-hover-bg: #cce9ff;
+  --bs-btn-hover-border-color: #cce9ff;
+  --bs-btn-focus-shadow-rgb: var(--bd-primary-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #c3e5ff;
+  --bs-btn-active-border-color: #c3e5ff;
+}
+
+.card {
+  box-shadow: var(--bs-box-shadow-sm);
+  overflow: hidden;
+}
