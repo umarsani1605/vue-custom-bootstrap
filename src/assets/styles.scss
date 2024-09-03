@@ -64,6 +64,20 @@ $card-border-color: none;
 $card-cap-bg: var(--bs-body-bg);
 $card-box-shadow: var(--bs-box-shadow-sm);
 $input-focus-border-color: var(--bs-primary);
+$carousel-indicator-width: 8px;
+$carousel-indicator-height: 8px;
+$dropdown-border-color: var(--bs-gray-200);
+$dropdown-box-shadow: var(--bs-box-shadow-sm);
+$dropdown-padding-x: 0.5rem;
+$dropdown-link-hover-bg: var(--bs-slate-100);
+$dropdown-link-active-color: var(--bs-body-color);
+$dropdown-link-active-bg: var(--bs-slate-100);
+$modal-inner-padding: 1.5rem;
+$modal-header-padding-y: 1.5rem;
+$modal-header-padding-x: 1.5rem;
+$modal-header-border-width: 0;
+$modal-content-border-width: 0;
+$modal-footer-border-width: 0;
 
 // // Required
 @import 'bootstrap/scss/variables';
@@ -137,6 +151,17 @@ $input-focus-border-color: var(--bs-primary);
 }
 
 // Custom styles
+.accordion-item {
+  border: none;
+  border-bottom: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+}
+.accordion-body {
+  padding-top: 0;
+}
+.accordion-item:last-of-type,
+.accordion-item:first-of-type {
+  border-radius: 0;
+}
 .alert-primary {
   --bs-alert-color: #2563eb;
   --bs-alert-link-color: #2563eb;
@@ -199,4 +224,20 @@ $input-focus-border-color: var(--bs-primary);
 .card {
   box-shadow: var(--bs-box-shadow-sm);
   overflow: hidden;
+}
+.carousel-indicators [data-bs-target] {
+  border-radius: 100%;
+}
+.dropdown-menu {
+  box-shadow: var(--bs-box-shadow-sm);
+}
+.dropdown-item:hover,
+.dropdown-item:focus,
+.dropdown-item:active {
+  color: var(--bs-body-color);
+  background-color: #f1f5f9;
+  border-radius: 0.3rem;
+}
+.modal-body {
+  padding: 0 1.5rem;
 }
